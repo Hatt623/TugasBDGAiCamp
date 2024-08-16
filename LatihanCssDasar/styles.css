@@ -1,0 +1,91 @@
+
+        /* Soal 1 */
+body{
+    background-color: #f0f0f0;
+}
+
+        /* Soal 2 */
+
+p{
+    color: red;
+}
+
+.container{
+    background-color: yellow;
+}
+
+#highlight{
+    color: orange;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(248, 0, 248);
+}
+
+a:hover{
+    color: rgb(17, 0, 250);
+    
+}
+
+        /* Soal 3 */
+
+#boxModel{
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    border: 5px solid black;
+}
+
+        /* Soal 4 */
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item{
+    padding: 10px;
+    border: 2px solid grey;
+}
+
+        /* Soal 5 */
+
+h2{
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.advanced-style p{
+    background-image: url('The\ Pillows.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.advanced-style{
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px;
+    background: linear-gradient(blue,purple);
+}
+
+        /* Soal 6 */
+
+@media (max-width: 600px) {
+    .flex-container{
+        flex-direction: column;
+    }
+
+    h2{
+        font-size: 24px;
+        
+    }
+
+    body{
+        background-color: #e0f7fa;
+    }
+    
+}
