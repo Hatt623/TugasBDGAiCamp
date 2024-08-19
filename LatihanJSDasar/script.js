@@ -8,7 +8,7 @@ window.onload = function() {
 function Perlihatkan()  {
     // Nama dan Umur
     let name = "John";
-    const age = 30;
+    let age = 30;
 
     // Buahan
     let fruits = ["Apple", "Banana", "Mango"];
@@ -36,7 +36,7 @@ function Perlihatkan()  {
     };
 
     // Penjumlahab antar 2 angka
-    const Tambah = (A, B) => A + B;
+    let Tambah = (A, B) => A + B;
 
     // Array Student
     let students = ["Alice", "Bob", "Charlie"];
