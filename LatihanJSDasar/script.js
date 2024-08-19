@@ -1,4 +1,4 @@
-// Gak ngerti
+// Soal 1
 window.onload = function() {
     document.querySelector("h1").textContent = "Latihan JavaScript Selesai";
 };  
