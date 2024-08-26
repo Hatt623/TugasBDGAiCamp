@@ -1,0 +1,117 @@
+/* Reset margin dan padding default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Agar footer tetap berada di bagian bawah */
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+main {
+    flex: 1; /* Memperbesar bagian ini untuk mengisi ruang di antara header dan footer */
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+/* Media Queries untuk Responsif */
+@media (max-width: 768px) {
+    /* Sesuaikan navigasi untuk tablet */
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    /* Sesuaikan padding dan ukuran font untuk tablet */
+    body {
+        padding: 0 20px;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Sesuaikan navigasi untuk ponsel */
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+
+    .navbar ul li a {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* Konten utama lebih kecil untuk layar ponsel */
+    .main-content {
+        padding: 10px;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}

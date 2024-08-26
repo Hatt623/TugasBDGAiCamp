@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="styleContact.css">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </head>
+    <body>
+        
+
+        <div class="contact-form">
+            <h2>Hubungi Kami</h2>
+            <div id="error-message" class="error-message">Harap isi semua field dan pastikan email valid.</div>
+            <form id="contactForm">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+    
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini" required></textarea>
+    
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </div>
+    
+        <script>
+            // Fungsi untuk memvalidasi email dengan regex
+            function validateEmail(email) {
+                const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                return re.test(String(email).toLowerCase());
+            }
+    
+            // Mendapatkan form dan elemen error message
+            const form = document.getElementById('contactForm');
+            const errorMessage = document.getElementById('error-message');
+    
+            // Event listener untuk menangani submit form
+            form.addEventListener('submit', function(event) {
+                // Mengambil nilai input
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+    
+                // Reset error message
+                errorMessage.style.display = 'none';
+    
+                // Validasi form
+                if (name === '' || email === '' || message === '') {
+                    errorMessage.style.display = 'block';
+                    errorMessage.textContent = 'Harap isi semua field.';
+                    event.preventDefault(); // Mencegah form untuk submit
+                } else if (!validateEmail(email)) {
+                    errorMessage.style.display = 'block';
+                    errorMessage.textContent = 'Harap masukkan email yang valid.';
+                    event.preventDefault(); // Mencegah form untuk submit
+                }
+            });
+        </script>
+    </body>
+</html>
