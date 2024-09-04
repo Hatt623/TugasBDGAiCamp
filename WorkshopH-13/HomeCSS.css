@@ -185,6 +185,7 @@ header nav ul li img {
 .services .service-item p {
     color: #1a2d41;
     font-size: 0.9em;
+    font-weight: bold;
 }
 
 /* Testimonials Section */
